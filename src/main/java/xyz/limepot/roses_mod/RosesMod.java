@@ -1,6 +1,8 @@
 package xyz.limepot.roses_mod;
 
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.block.*;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
@@ -17,8 +19,8 @@ public class RosesMod implements ModInitializer {
 	public static final String MOD_ID = "roses_mod";
 	public static final Logger LOGGER = LoggerFactory.getLogger("Roses Mod");
 
-	public static final Block ROSE_FLOWER = new FlowerBlock(StatusEffects.HASTE, 8, QuiltBlockSettings.copy(Blocks.POPPY));
-	public static final Block POTTED_ROSE = new FlowerPotBlock(ROSE_FLOWER, QuiltBlockSettings.copy(Blocks.POTTED_POPPY));
+	public static final Block ROSE_FLOWER = new FlowerBlock(StatusEffects.HASTE, 8, QuiltBlockSettings.copyOf(Blocks.POPPY).nonOpaque());
+	public static final Block POTTED_ROSE = new FlowerPotBlock(ROSE_FLOWER, QuiltBlockSettings.copyOf(Blocks.POTTED_POPPY));
 
 	@Override
 	public void onInitialize(ModContainer mod) {
@@ -33,6 +35,12 @@ public class RosesMod implements ModInitializer {
 		Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "potted_rose"), POTTED_ROSE);
 
 
+
+		//RENDER LAYERS
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RosesMod.POTTED_ROSE);
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RosesMod.ROSE_FLOWER);
+
+		//INIT
 		LOGGER.info("Hello Quilt world from {}!", mod.metadata().name());
 	}
 
