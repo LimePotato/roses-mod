@@ -13,6 +13,9 @@ import net.minecraft.loot.LootPool;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
@@ -68,6 +71,7 @@ public class RosesMod implements ModInitializer {
 				tableBuilder.pool(poolBuilder);
 			}
 		});
+
 
 		//INIT
 		LOGGER.info("Hello Quilt world from {}!", mod.metadata().name());
