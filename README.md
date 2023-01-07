@@ -1,5 +1,5 @@
 # Roses Mod
-
+![GitHub last commit](https://img.shields.io/github/last-commit/LimePotato/roses-mod)
 ## Features:
     - Added the old singular roses
     - Rose bushes drop a few individual roses
