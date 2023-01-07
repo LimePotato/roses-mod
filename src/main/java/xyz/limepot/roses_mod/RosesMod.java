@@ -1,7 +1,7 @@
 package xyz.limepot.roses_mod;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -17,13 +17,21 @@ public class RosesMod implements ModInitializer {
 	public static final String MOD_ID = "roses_mod";
 	public static final Logger LOGGER = LoggerFactory.getLogger("Roses Mod");
 
-	public static final Block ROSE_FLOWER = new Block(QuiltBlockSettings.of(Material.ORGANIC_PRODUCT).strength(0.3f));
-
+	public static final Block ROSE_FLOWER = new FlowerBlock(StatusEffects.HASTE, 8, QuiltBlockSettings.copy(Blocks.POPPY));
+	public static final Block POTTED_ROSE = new FlowerPotBlock(ROSE_FLOWER, QuiltBlockSettings.copy(Blocks.POTTED_POPPY));
 
 	@Override
 	public void onInitialize(ModContainer mod) {
+
+		//REGISTER BLOCKS AND BLOCK ITEMS
+		//TODO: ADD ITEMS TO CREATIVE TABS
+
+		//ROSE FLOWER
 		Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "rose_flower"), ROSE_FLOWER);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "rose_flower"), new BlockItem(ROSE_FLOWER, new QuiltItemSettings()));
+		//POTTED ROSE FLOWER
+		Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "potted_rose"), POTTED_ROSE);
+
 
 		LOGGER.info("Hello Quilt world from {}!", mod.metadata().name());
 	}
