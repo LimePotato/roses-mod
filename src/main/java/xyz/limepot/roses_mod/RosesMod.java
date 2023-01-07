@@ -1,10 +1,14 @@
 package xyz.limepot.roses_mod;
 
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.block.*;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.Items;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -35,8 +39,14 @@ public class RosesMod implements ModInitializer {
 		Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "potted_rose"), POTTED_ROSE);
 
 
-		//RENDER LAYERS
-
+		//LOOT TABLES
+		final Identifier ROSE_BUSH_LOOT_TABLE_ID = Blocks.ROSE_BUSH.getLootTableId();
+		LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+			if (source.isBuiltin() && ROSE_BUSH_LOOT_TABLE_ID.equals(id)) {
+				LootPool.Builder poolBuilder = LootPool.builder().with(ItemEntry.builder(RosesMod.ROSE_FLOWER));;
+				tableBuilder.pool(poolBuilder);
+			}
+		});
 
 		//INIT
 		LOGGER.info("Hello Quilt world from {}!", mod.metadata().name());
