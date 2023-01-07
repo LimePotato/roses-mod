@@ -35,10 +35,8 @@ public class RosesMod implements ModInitializer {
 		Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "potted_rose"), POTTED_ROSE);
 
 
-
 		//RENDER LAYERS
-		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RosesMod.POTTED_ROSE);
-		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RosesMod.ROSE_FLOWER);
+
 
 		//INIT
 		LOGGER.info("Hello Quilt world from {}!", mod.metadata().name());

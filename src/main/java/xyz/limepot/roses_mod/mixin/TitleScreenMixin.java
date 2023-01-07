@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class TitleScreenMixin {
 	@Inject(method = "init", at = @At("TAIL"))
 	public void rosesMod$onInit(CallbackInfo ci) {
-		RosesMod.LOGGER.info("This line is printed by an example mod mixin!");
+		RosesMod.LOGGER.info("");
 	}
 }

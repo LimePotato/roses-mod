@@ -20,7 +20,7 @@
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
 			"init": "xyz.limepot.roses_mod.RosesMod",
-			"clientmod": "xyz.limepot.roses_mod.RosesModClient"
+			"client_init": "xyz.limepot.roses_mod.RosesModClient"
 		},
 		"depends": [
 			{
