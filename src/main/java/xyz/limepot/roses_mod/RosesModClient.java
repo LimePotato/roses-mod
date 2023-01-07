@@ -8,7 +8,12 @@ import org.quiltmc.qsl.base.api.entrypoint.client.ClientModInitializer;
 
 public class RosesModClient implements ClientModInitializer {
 	public void onInitializeClient(ModContainer mod) {
+		//ROSE FLOWER
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RosesMod.POTTED_ROSE);
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RosesMod.ROSE_FLOWER);
+
+		//CYAN ROSE
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RosesMod.POTTED_CYAN);
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RosesMod.CYAN_ROSE);
 	}
 }

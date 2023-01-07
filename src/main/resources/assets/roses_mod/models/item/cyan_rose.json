@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "roses_mod:block/cyan_rose"
+  }
+}

@@ -1,4 +1,6 @@
 {
   "block.roses_mod.rose_flower": "Rose",
-  "block.roses_mod.potted_rose": "Potted Rose"
+  "block.roses_mod.potted_rose": "Potted Rose",
+  "block.roses_mod.cyan_rose": "Cyan Rose",
+  "block.roses_mod.potted_cyan": "Potted Cyan Rose"
 }
