@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "roses_mod:block/cyan_rose_bush_bottom"
+  }
+}

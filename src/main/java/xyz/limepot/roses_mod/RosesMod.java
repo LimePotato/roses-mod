@@ -34,6 +34,8 @@ public class RosesMod implements ModInitializer {
 	//Cyan Rose
 	public static final Block CYAN_ROSE = new FlowerBlock(StatusEffects.NAUSEA, 8, QuiltBlockSettings.copyOf(Blocks.POPPY).nonOpaque());
 	public static final Block POTTED_CYAN = new FlowerPotBlock(CYAN_ROSE, QuiltBlockSettings.copyOf(Blocks.POTTED_POPPY));
+	//Cyan Rose Bush
+	public static final Block CYAN_ROSE_BUSH = new TallPlantBlock(QuiltBlockSettings.copyOf(Blocks.LARGE_FERN));
 
 
 	@Override
@@ -52,7 +54,9 @@ public class RosesMod implements ModInitializer {
 			Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cyan_rose"), new BlockItem(CYAN_ROSE, new QuiltItemSettings()));
 				//POTTED CYAN ROSE
 				Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "potted_cyan"), POTTED_CYAN);
-
+		//CYAN ROSE BUSH
+			Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "cyan_rose_bush"), CYAN_ROSE_BUSH);
+			Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cyan_rose_bush"), new BlockItem(CYAN_ROSE_BUSH, new QuiltItemSettings()));
 
 		//CREATIVE TABS
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
@@ -60,6 +64,9 @@ public class RosesMod implements ModInitializer {
 		});
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
 			content.addAfter(Items.BLUE_ORCHID, CYAN_ROSE);
+		});
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
+			content.addAfter(Items.ROSE_BUSH, CYAN_ROSE_BUSH);
 		});
 
 
@@ -71,6 +78,7 @@ public class RosesMod implements ModInitializer {
 				tableBuilder.pool(poolBuilder);
 			}
 		});
+
 
 
 		//INIT

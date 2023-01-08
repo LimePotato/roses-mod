@@ -15,5 +15,8 @@ public class RosesModClient implements ClientModInitializer {
 		//CYAN ROSE
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RosesMod.POTTED_CYAN);
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RosesMod.CYAN_ROSE);
+
+		//CYAN ROSE BUSH
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RosesMod.CYAN_ROSE_BUSH);
 	}
 }
