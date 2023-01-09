@@ -1,10 +1,8 @@
 package xyz.limepot.roses_mod;
 
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.block.*;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroups;
@@ -14,9 +12,6 @@ import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
@@ -24,16 +19,17 @@ import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+//import xyz.limepot.roses_mod.world.feature.ModConfiguredFeatures;
 
 public class RosesMod implements ModInitializer {
 	public static final String MOD_ID = "roses_mod";
 	public static final Logger LOGGER = LoggerFactory.getLogger("Roses Mod");
 
 	//ROSE
-	public static final Block ROSE_FLOWER = new FlowerBlock(StatusEffects.HASTE, 8, QuiltBlockSettings.copyOf(Blocks.POPPY).nonOpaque());
+	public static final Block ROSE_FLOWER = new FlowerBlock(StatusEffects.INSTANT_DAMAGE, 6, QuiltBlockSettings.copyOf(Blocks.POPPY).nonOpaque());
 	public static final Block POTTED_ROSE = new FlowerPotBlock(ROSE_FLOWER, QuiltBlockSettings.copyOf(Blocks.POTTED_POPPY));
 	//Cyan Rose
-	public static final Block CYAN_ROSE = new FlowerBlock(StatusEffects.NAUSEA, 8, QuiltBlockSettings.copyOf(Blocks.POPPY).nonOpaque());
+	public static final Block CYAN_ROSE = new FlowerBlock(StatusEffects.INSTANT_HEALTH, 6, QuiltBlockSettings.copyOf(Blocks.POPPY).nonOpaque());
 	public static final Block POTTED_CYAN = new FlowerPotBlock(CYAN_ROSE, QuiltBlockSettings.copyOf(Blocks.POTTED_POPPY));
 	//Cyan Rose Bush
 	public static final Block CYAN_ROSE_BUSH = new TallPlantBlock(QuiltBlockSettings.copyOf(Blocks.LARGE_FERN));
@@ -41,6 +37,8 @@ public class RosesMod implements ModInitializer {
 
 	@Override
 	public void onInitialize(ModContainer mod) {
+		//REGISTER CONFIGURED FEATURES
+		//ModConfiguredFeatures.registerConfiguredFeatures();
 
 		//REGISTER BLOCKS AND BLOCK ITEMS
 		//TODO: ADD ITEMS TO CREATIVE TABS
