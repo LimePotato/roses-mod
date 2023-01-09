@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "  W"
+  ],
+  "key": {
+    "W": {
+      "item": "roses_mod:cyan_rose"
+    }
+  },
+  "result": {
+    "item": "minecraft:cyan_dye",
+    "count": 1
+  }
+}
