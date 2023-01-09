@@ -11,6 +11,7 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -74,7 +75,7 @@ public class RosesMod implements ModInitializer {
 		final Identifier ROSE_BUSH_LOOT_TABLE_ID = Blocks.ROSE_BUSH.getLootTableId();
 		LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
 			if (source.isBuiltin() && ROSE_BUSH_LOOT_TABLE_ID.equals(id)) {
-				LootPool.Builder poolBuilder = LootPool.builder().with(ItemEntry.builder(RosesMod.ROSE_FLOWER));;
+				LootPool.Builder poolBuilder = LootPool.builder().rolls(ConstantLootNumberProvider.create(3)).with(ItemEntry.builder(RosesMod.ROSE_FLOWER));;
 				tableBuilder.pool(poolBuilder);
 			}
 		});
