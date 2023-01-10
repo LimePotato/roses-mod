@@ -15,6 +15,7 @@
 				"issues": "https://github.com/LimePotato/roses-mod/issues",
 				"sources": "https://github.com/LimePotato/roses-mod/"
 			},
+			"license": "Unlicense",
 			"icon": "assets/roses_mod/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
@@ -37,5 +38,13 @@
 			}
 		]
 	},
-	"mixin": "roses_mod.mixins.json"
+	"mixin": "roses_mod.mixins.json",
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.gg/EJC9zkX"
+			}
+		}
+	}
 }
+
