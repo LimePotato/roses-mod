@@ -19,6 +19,7 @@ import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import xyz.limepot.roses_mod.world.gen.ModWorldGen;
 //import xyz.limepot.roses_mod.world.feature.ModConfiguredFeatures;
 
 public class RosesMod implements ModInitializer {
@@ -37,8 +38,8 @@ public class RosesMod implements ModInitializer {
 
 	@Override
 	public void onInitialize(ModContainer mod) {
-		//REGISTER CONFIGURED FEATURES
-		//ModConfiguredFeatures.registerConfiguredFeatures();
+		//REGISTER WORLDGEN
+		ModWorldGen.generateWorldGen();
 
 		//REGISTER BLOCKS AND BLOCK ITEMS
 		//TODO: ADD ITEMS TO CREATIVE TABS
