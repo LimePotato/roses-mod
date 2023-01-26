@@ -23,7 +23,7 @@ public class ModFlowerGeneration {
 		RegistryKey<TagKey> cyanRoseTag = RegistryKey.of(RegistryKeys.TAGS, new Identifier(MOD_ID, "cyan_roses"));
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, cyanRoseTag);
 		//CYAN ROSE BUSH
-		RegistryKey<TagKey> cyanRoseBushTag = RegistryKey.of(RegistryKeys.TAGS, new Identifier(MOD_ID, "cyan_rose_bushes"));
+		RegistryKey<TagKey> cyanRoseBushT   ag = RegistryKey.of(RegistryKeys.TAGS, new Identifier(MOD_ID, "cyan_rose_bushes"));
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, cyanRoseBushTag);
 	}
 	 */
