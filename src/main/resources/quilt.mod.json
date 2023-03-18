@@ -26,15 +26,15 @@
 		"depends": [
 			{
 				"id": "quilt_loader",
-				"versions": ">=0.17.6-"
+				"versions": ">=0.18.5"
 			},
 			{
 				"id": "quilted_fabric_api",
-				"versions": ">=5.0.0-"
+				"versions": ">=5.0.0-beta.1"
 			},
 			{
 				"id": "minecraft",
-				"versions": ">=1.19.3"
+				"versions": ">=1.19.4"
 			}
 		]
 	},
@@ -42,7 +42,7 @@
 	"custom": {
 		"modmenu": {
 			"links": {
-				"modmenu.discord": "https://discord.gg/EJC9zkX"
+				"modmenu.discord": "https://limepot.xyz/redir/discord"
 			}
 		}
 	}
