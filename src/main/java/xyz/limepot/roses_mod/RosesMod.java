@@ -59,6 +59,7 @@ public class RosesMod implements ModInitializer {
 			Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cyan_rose_bush"), new BlockItem(CYAN_ROSE_BUSH, new QuiltItemSettings()));
 
 		//CREATIVE TABS
+		/*
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
 			content.addAfter(Items.POPPY, ROSE_FLOWER);
 		});
@@ -67,7 +68,7 @@ public class RosesMod implements ModInitializer {
 		});
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
 			content.addAfter(Items.ROSE_BUSH, CYAN_ROSE_BUSH);
-		});
+		});*/
 
 
 		//LOOT TABLES
