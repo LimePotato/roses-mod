@@ -4,7 +4,7 @@ package xyz.limepot.roses_mod.world.gen;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
-//import net.minecraft.world.biome.BiomeKeys;
+import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
@@ -28,10 +28,10 @@ public class ModFlowerGeneration {
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, cyanRoseBushTag);
 	}
 	 */
-	public static void generateFlowers() {
-		/*RegistryKey<ConfiguredFeature<?, ?>> cyanRoseBushTag = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(MOD_ID, "cyan_rose_bush"));
+	public static void generateFlowers() {/*
+		RegistryKey<ConfiguredFeature<?, ?>> cyanRoseBushTag = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(MOD_ID, "cyan_rose_bush"));
 		RegistryKey<PlacedFeature> cyanRoseBushTagKey = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(MOD_ID, "cyan_rose_bushes"));
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST),
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.FOREST),
 				GenerationStep.Feature.VEGETAL_DECORATION,
 				RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(MOD_ID, "cyan_rose_bush")));*/
 	}

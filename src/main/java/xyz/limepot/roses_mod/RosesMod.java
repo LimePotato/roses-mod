@@ -20,6 +20,8 @@ import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.limepot.roses_mod.world.gen.ModWorldGen;
+
+import java.util.Random;
 //import xyz.limepot.roses_mod.world.feature.ModConfiguredFeatures;
 
 public class RosesMod implements ModInitializer {
@@ -59,16 +61,16 @@ public class RosesMod implements ModInitializer {
 			Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cyan_rose_bush"), new BlockItem(CYAN_ROSE_BUSH, new QuiltItemSettings()));
 
 		//CREATIVE TABS
-		/*
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
+
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL_BLOCKS).register(content -> {
 			content.addAfter(Items.POPPY, ROSE_FLOWER);
 		});
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL_BLOCKS).register(content -> {
 			content.addAfter(Items.BLUE_ORCHID, CYAN_ROSE);
 		});
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL_BLOCKS).register(content -> {
 			content.addAfter(Items.ROSE_BUSH, CYAN_ROSE_BUSH);
-		});*/
+		});
 
 
 		//LOOT TABLES
