@@ -44,7 +44,6 @@ public class RosesMod implements ModInitializer {
 		ModWorldGen.generateWorldGen();
 
 		//REGISTER BLOCKS AND BLOCK ITEMS
-		//TODO: ADD ITEMS TO CREATIVE TABS
 
 		//ROSE FLOWER
 			Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "rose_flower"), ROSE_FLOWER);

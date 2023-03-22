@@ -11,7 +11,7 @@
 				"LimePotato": "Developer"
 			},
 			"contact": {
-				"homepage": "https://limepot.xyz/rosemod",
+				"homepage": "https://modrinth.com/mod/roses-mod",
 				"issues": "https://github.com/LimePotato/roses-mod/issues",
 				"sources": "https://github.com/LimePotato/roses-mod/"
 			},
@@ -39,11 +39,11 @@
 		]
 	},
 	"mixin": "roses_mod.mixins.json",
-	"custom": {
-		"modmenu": {
-			"links": {
-				"modmenu.discord": "https://limepot.xyz/redir/discord"
-			}
+	"modmenu:api": true,
+	"modmenu": {
+		"update_checker": true,
+		"links": {
+			"modmenu.discord": "https://limepot.xyz/redir/discord"
 		}
 	}
 }
